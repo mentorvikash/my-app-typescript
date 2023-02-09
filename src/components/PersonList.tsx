@@ -1,10 +1,8 @@
 import React from 'react'
+import { nameType } from './person.type'
 
 type propType = { 
-    nameList: {
-        fname: string,
-        lname: string
-    }[]
+    nameList: nameType[]
 }
 
 function PersonList(props : propType) {

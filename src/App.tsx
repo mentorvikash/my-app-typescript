@@ -8,6 +8,12 @@ import Status from './components/Status';
 import Heading from './components/Heading';
 import Oscor from './components/Oscor';
 import Button from './components/Button';
+import InputElement from './components/InputElement';
+import PassingCss from './components/PassingCss';
+import ExpotingType from './components/ExpotingType';
+import Login from './components/withHooks/login';
+import CountApp from './components/Reducers/CountApp';
+import DiscimenatedUnion from './components/Reducers/DiscimenatedUnion';
 
 const personList = [
   {
@@ -43,6 +49,12 @@ function App() {
       </Oscor>
       <Welcome name="Revive Coding" isKnown={true} />
       <Button onHandleClick = {(event, id) => console.log(event.target, id)} />
+      <InputElement value='' handleChange={(event) => console.log(event) } />
+      <PassingCss style={{ color: "white", background: "black", border: "1px solid black " }} />
+      <ExpotingType fname='Vikash' lname='singh' />
+      <Login />
+      <CountApp />
+      <DiscimenatedUnion />
     </div>
   );
 }
