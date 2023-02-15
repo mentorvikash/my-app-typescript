@@ -14,6 +14,8 @@ import ExpotingType from './components/ExpotingType';
 import Login from './components/withHooks/login';
 import CountApp from './components/Reducers/CountApp';
 import DiscimenatedUnion from './components/Reducers/DiscimenatedUnion';
+import TheameCoontextProvider from './components/context/TheamContext';
+import { Box } from './components/context/Box';
 
 const personList = [
   {
@@ -55,6 +57,9 @@ function App() {
       <Login />
       <CountApp />
       <DiscimenatedUnion />
+      <TheameCoontextProvider>
+      <Box />
+      </TheameCoontextProvider>
     </div>
   );
 }
