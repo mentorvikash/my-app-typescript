@@ -18,7 +18,11 @@ import TheameCoontextProvider from "./components/context/TheamContext";
 import { Box } from "./components/context/Box";
 import { UserContextProvider } from "./components/context/userContext";
 import User from "./components/context/User";
-
+import DomRef from "./components/useRef/DomRef";
+import MuitableRef from "./components/useRef/MuitableRef";
+import { Counter } from "./components/class/counter";
+import { PrivateControl } from "./components/Auth/Private";
+import Profile from "./components/Auth/Profile";
 const personList = [
   {
     fname: "Revive",
@@ -65,6 +69,10 @@ function App() {
       <UserContextProvider>
         <User />
       </UserContextProvider>
+      <DomRef />
+      <MuitableRef />
+      <Counter message="The count value is: " />
+      <PrivateControl isLogin={true} Component={Profile} />
     </div>
   );
 }
