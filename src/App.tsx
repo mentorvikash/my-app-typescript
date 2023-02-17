@@ -23,6 +23,7 @@ import MuitableRef from "./components/useRef/MuitableRef";
 import { Counter } from "./components/class/counter";
 import { PrivateControl } from "./components/Auth/Private";
 import Profile from "./components/Auth/Profile";
+import ItemList from "./components/Generics/ItemType";
 const personList = [
   {
     fname: "Revive",
@@ -73,6 +74,34 @@ function App() {
       <MuitableRef />
       <Counter message="The count value is: " />
       <PrivateControl isLogin={true} Component={Profile} />
+      {/* <ItemList
+        items={["mango", "apple", "banana", "fruits"]}
+        clickHandler={(item) => console.log(item)}
+      />
+      <ItemList
+        items={[23, 25, 36, 58]}
+        clickHandler={(item) => console.log(item)}
+      /> */}
+      <ItemList
+        items={[
+          {
+            id: 1,
+            fname: "vikash",
+            lname: "singh",
+          },
+          {
+            id: 2,
+            fname: "rajat",
+            lname: "singh",
+          },
+          {
+            id: 3,
+            fname: "vishal",
+            lname: "singh",
+          },
+        ]}
+        clickHandler={(item) => console.log(item)}
+      />
     </div>
   );
 }
