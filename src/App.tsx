@@ -24,6 +24,7 @@ import { Counter } from "./components/class/counter";
 import { PrivateControl } from "./components/Auth/Private";
 import Profile from "./components/Auth/Profile";
 import ItemList from "./components/Generics/ItemType";
+import RendomNumber from "./components/RandomNumber/rendomNumber";
 const personList = [
   {
     fname: "Revive",
@@ -102,6 +103,7 @@ function App() {
         ]}
         clickHandler={(item) => console.log(item)}
       />
+      <RendomNumber number={12} isZero={true} /> 
     </div>
   );
 }
