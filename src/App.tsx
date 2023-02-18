@@ -25,6 +25,11 @@ import { PrivateControl } from "./components/Auth/Private";
 import Profile from "./components/Auth/Profile";
 import ItemList from "./components/Generics/ItemType";
 import RendomNumber from "./components/RandomNumber/rendomNumber";
+import TempletLitral from "./components/templetLitral/TempletLitral";
+import Toast from "./components/templetLitral/Toast";
+import { CustomComponent } from "./components/CustomComponent";
+import Polymorphic from "./components/Polymorphic/Polymorphic";
+
 const personList = [
   {
     fname: "Revive",
@@ -104,8 +109,18 @@ function App() {
         clickHandler={(item) => console.log(item)}
       />
       <RendomNumber number={12} isZero={true} /> 
+      <TempletLitral status="Loding"/>
+      <Toast position="center-bottom"/>
+      <CustomComponent isKnown={true} name="satwant singh" friends={10} />
+      <Polymorphic color="primary" size="lg" >
+        this is just a string not more...
+      </Polymorphic>
+      <Polymorphic as="h1"  size="lg" >Heading</Polymorphic>
+      <Polymorphic as="p" size="md">Paragraph</Polymorphic>
+      <Polymorphic as="label" htmlFor="someid" size="sm">Lable</Polymorphic>
+
     </div>
   );
-}
+} 
 
 export default App;
